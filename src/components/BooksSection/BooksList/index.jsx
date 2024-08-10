@@ -1,18 +1,19 @@
-import { BookCard } from "./BookCard"
+import { BookCard } from "./BookCard";
+import styles from "./style.module.scss";
 
 export const BooksList = ({bookList, search}) => {
     return (
-        <div>
-            <span>Livros listados: {bookList.length}</span>
-            {search ? <p>Resultado de busca para: {search}</p> : null}
+        <div className={styles.booksListBox}>
+            <span className="paragraph bold">Livros listados: {bookList.length}</span>
+            {search ? <p className="paragraph">Resultado de busca para: {search}</p> : null}
             {bookList.length > 0 ? (
-            <ul>
+            <ul className={styles.booksList}>
                 {bookList.map(book => (
                     <BookCard key={book.id} book={book} />
                 ))}
             </ul>
             ) : (
-                <p>Nenhum Resultado encontrado.</p>
+                <p className="paragraph">Nenhum Resultado encontrado.</p>
             )}
         </div>
     )

@@ -1,7 +1,8 @@
-import { useState } from "react"
-import { BooksList } from "./BooksList"
-import { Filters } from "./Filters"
+import { useState } from "react";
+import { BooksList } from "./BooksList";
+import { Filters } from "./Filters";
 import { books } from "../../data/books";
+import style from "./style.module.scss";
 
 export const BooksSection = () => {
     const [search, setSearch] = useState("");
@@ -31,8 +32,12 @@ export const BooksSection = () => {
 
     return (
         <section>
-            <Filters cleanFilters={cleanFilters} setSearch={setSearch} setCategory={setCategory} min={min} setMin={setMin} max={max} setMax={setMax} />
-            <BooksList search={search} bookList={booksResults} />
+            <div className="container">
+                <div className={style.flexBox}>
+                    <Filters cleanFilters={cleanFilters} setSearch={setSearch} setCategory={setCategory} min={min} setMin={setMin} max={max} setMax={setMax} />
+                    <BooksList search={search} bookList={booksResults} />
+                </div>
+            </div>
         </section>
     )
 }

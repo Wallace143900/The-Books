@@ -1,8 +1,9 @@
-import { categories } from "../../../../data/category"
+import { categories } from "../../../../data/category";
+import style from "./style.module.scss";
 
 export const CategoryFilters = ({setCategory}) => {
     return (
-        <div>
+        <div className={style.categoryFilters}>
             <h2 className="title2">Filtrar por categoria</h2>
             <ul>
                 {categories.map(category => (

@@ -1,0 +1,12 @@
+.flexBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer{
+    padding: .625rem 0;
+    background: var(--color-primary);
+}
