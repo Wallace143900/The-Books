@@ -2,10 +2,10 @@ export const BookCard = ({book}) => {
     return (
         <li>
             <div>
-                <h3>{book.name}</h3>
-                <p>{book.category}</p>
+                <h2 className="title2">{book.name}</h2>
+                <p className="paragraph">{book.category}</p>
             </div>
-            <span>{book.price}</span>
+            <span className="paragraph bold">{book.price}</span>
         </li>
     )
 }

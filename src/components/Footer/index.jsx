@@ -4,7 +4,7 @@ export const Footer = () => {
     return (
         <footer>
             <img src={logo} alt="Logo Books" />
-            <p>Todos os direitos reservados - Wallace Menezes</p>
+            <p className="paragraph white">Todos os direitos reservados - Wallace Menezes</p>
         </footer>
     )
 }
